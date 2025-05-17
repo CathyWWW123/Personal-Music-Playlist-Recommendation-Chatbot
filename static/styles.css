@@ -1,0 +1,252 @@
+/* General style */
+body {
+    font-family: 'Nunito', Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#chat-container {
+    width: 400px;
+    height: 700px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Chat title */
+#chat-header {
+    background: linear-gradient(90deg, #4CAF50, #007BFF);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 2px solid #ddd;
+}
+
+/* Chat window */
+#chat-window {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+#messages {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.message {
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.message.user {
+    align-self: flex-end;
+    background-color: #0084ff;
+    color: white;
+}
+
+.message.bot {
+    align-self: flex-start;
+    background-color: #e4e6eb;
+    color: black;
+}
+
+.message.loading {
+    align-self: flex-start;
+    color: gray;
+    font-style: italic;
+}
+
+/* Input box */
+#chat-input {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+#chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#chat-input button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#chat-input button:hover {
+    background-color: #45a049;
+    transform: scale(1.05); /*Mouseover zoom */
+}
+
+#chat-input button:active {
+    transform: scale(0.95); /* Click the button to zoom out */
+}
+
+/* Refresh button style */
+#refresh-container {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+#refreshButton {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#refreshButton:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /*Mouseover zoom */
+}
+
+#refreshButton:active {
+    transform: scale(0.95); /* Click the button to zoom out */
+}
+
+/* Recommended songs area */
+#recommendations-container {
+    padding: 10px;
+    background: linear-gradient(to bottom, #f9f9f9, #eaf4fc); /* Gradient background */
+    border-top: 1px solid #ddd;
+    text-align: center;
+}
+
+#recommendations {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* Recommended song card style */
+.recommendation-item {
+    width: 150px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.recommendation-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2); /* Mouse hover shadow */
+}
+
+/* Recommended song picture style */
+.recommendation-item img {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.recommendation-item img:hover {
+    transform: scale(1.1); /* Zoom in on mouseover */
+}
+
+/* Recommended song title style */
+.recommendation-item a {
+    color: #007BFF;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+    margin-top: 5px;
+}
+
+.recommendation-item a:hover {
+    text-decoration: underline;
+}
+
+/* Loading animation container */
+#loading-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.3s ease;
+}
+
+.hidden {
+    display: none;
+    opacity: 0;
+}
+
+/* Loading animation */
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #007BFF;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+#loading-container {
+    pointer-events: none; /* Add this line to ensure that hiding does not affect mouse events */
+}
+
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#loading-container p {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: #333;
+    margin-top: 10px;
+}
+
+#chat-window {
+    flex: 1;
+    overflow-y: auto; /* Make sure the content can scroll */
+    padding: 10px;
+    max-height: 500px; /* Limit the maximum height */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}

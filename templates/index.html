@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Recommendation Chatbot</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        // Refresh page function
+        function refreshPage() {
+            window.location.href = "/"; // Refresh the current page
+        }
+    </script>
+</head>
+<body>
+    <div id="chat-container">
+        <div id="chat-header">Music Recommendation Chatbot</div>
+        <div id="chat-window">
+            <div id="messages"></div>
+        </div>
+        <div id="chat-input">
+            <input type="text" id="userInput" placeholder="Type your message here..." autocomplete="off">
+            <button id="sendButton">Send</button>
+        </div>
+        <!-- Add refresh button -->
+        <div id="refresh-container">
+            <button id="refreshButton" onclick="refreshPage()">Refresh</button>
+        </div>
+        <!-- Recommended songs display area -->
+        <div id="recommendations-container">
+            <h3>Recommended Songs</h3>
+            <div id="recommendations"></div>
+        </div>
+    </div>
+
+    <!-- Add loading animation container -->
+    <div id="loading-container" class="hidden">
+        <div class="spinner"></div>
+        <p>Loading recommendations...</p>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
