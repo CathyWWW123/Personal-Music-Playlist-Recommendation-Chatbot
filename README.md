@@ -43,15 +43,20 @@ This project is a **music recommendation chatbot** that provides personalized so
 
 ## Deployment
 
-1. You can deploy this Flask app on any hosting service (Render, Heroku, AWS, etc.). Be sure to set your environment variables:
+## Deployment
+
+You can deploy this Flask app on any hosting service (e.g., Render, Heroku, AWS) or run it locally. Follow the steps below:
+
+1. Set the following environment variables (either via terminal or in a `.env` file):
 
 ```bash
-SPOTIFY_CLIENT_ID=your_client_id
-SPOTIFY_CLIENT_SECRET=your_client_secret
-HF_TOKEN=your_hugging_face_key
-OPENAI_API_KEY=your_openai_key
+export SPOTIFY_CLIENT_ID=your_client_id
+export SPOTIFY_CLIENT_SECRET=your_client_secret
+export HF_TOKEN=your_hugging_face_key
+export OPENAI_API_KEY=your_openai_key
 
-2. ```bash
+
+2. Run the Flask app
 python app.py
 
-3. Click the generated URL in your terminal to enter the website.
+3. Open your browser and go to the local URL (e.g., http://127.0.0.1:5000) shown in your terminal.
