@@ -13,7 +13,7 @@ This project is a **music recommendation chatbot** that provides personalized so
   After emotion detection, the user supplies a Spotify playlist URL. We scrape your playlist’s tracks, match them against our master dataset, encode them with an autoencoder, then recommend songs with high cosine similarity (excluding your seed tracks).
 
 - **Lightweight, End-to-End Pipeline**  
-  - GPT-3.5 for quick emotion inference  
+  - DistilRoBERTa-base for quick emotion inference  
   - Spotipy for Spotify API integration  
   - PyTorch autoencoder + scikit-learn scaler for feature encoding  
   - Cosine similarity for nearest-neighbor retrieval
@@ -49,4 +49,5 @@ You can deploy this Flask app on any hosting service (Render, Heroku, AWS, etc.)
 ```bash
 SPOTIFY_CLIENT_ID=your_client_id
 SPOTIFY_CLIENT_SECRET=your_client_secret
+HF_TOKEN=your_hugging_face_key
 OPENAI_API_KEY=your_openai_key
