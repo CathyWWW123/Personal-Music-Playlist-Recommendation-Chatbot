@@ -42,7 +42,7 @@ This project is a **music recommendation chatbot** that provides personalized so
 
 ---
 
-## Deployment
+## Deployment & Tutorial
 
 You can deploy this Flask app on any hosting service (e.g., Render, Heroku, AWS) or run it locally. Follow the steps below:
 
