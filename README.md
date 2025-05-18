@@ -64,10 +64,10 @@ You can deploy this Flask app on any hosting service (e.g., Render, Heroku, AWS)
 
 2. To download the dataset required for training and music recommendation, run:
 
-```bash
-pip install gdown
-python download_data.py
-```
+    ```bash
+    pip install gdown
+    python download_data.py
+    ```
 
 3.  Run the Flask app:
     ```bash
