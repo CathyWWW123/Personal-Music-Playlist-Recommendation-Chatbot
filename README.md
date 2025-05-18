@@ -17,6 +17,7 @@ This project is a **music recommendation chatbot** that provides personalized so
   - Spotipy for Spotify API integration  
   - PyTorch autoencoder + scikit-learn scaler for feature encoding  
   - Cosine similarity for nearest-neighbor retrieval
+  - GPT-3.5 for user interactions
 
 - **Local or Hosted Deployment**  
   Runs locally with Flask or can be hosted on any WSGI-compatible platform. 
