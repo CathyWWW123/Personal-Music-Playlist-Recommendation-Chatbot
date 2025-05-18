@@ -27,7 +27,7 @@ This project is a **music recommendation chatbot** that provides personalized so
 
 1. **Chat & Emotion Detection**  
    - The bot greets the user and engages in three conversational turns.  
-   - All three messages are sent to GPT-3.5 to classify mood into one of six emotions.
+   - All three messages are sent to DistilRoBERTa-base to classify mood into one of seven emotions.
 
 2. **Playlist Input**  
    - After a natural closing message, the bot asks for your Spotify playlist URL.  
