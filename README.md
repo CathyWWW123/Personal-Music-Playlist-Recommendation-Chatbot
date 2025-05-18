@@ -7,7 +7,7 @@ This project is a **music recommendation chatbot** that provides personalized so
 ## Features
 
 - **Emotion-Based Recommendations**  
-  Analyzes three rounds of user chat with GPT-3.5 to detect one of six emotions (`anger`, `disgust`, `fear`, `joy`, `sadness`, `surprise`) and steers recommendations accordingly.
+  Analyzes three rounds of user chat with DistilRoBERTa-base to detect one of six emotions (`anger`, `disgust`, `fear`, `joy`, `sadness`, `surprise`) and steers recommendations accordingly.
 
 - **Playlist-Seeded Similarity Filtering**  
   After emotion detection, the user supplies a Spotify playlist URL. We scrape your playlist’s tracks, match them against our master dataset, encode them with an autoencoder, then recommend songs with high cosine similarity (excluding your seed tracks).
