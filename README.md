@@ -1,6 +1,6 @@
 # Music Recommendation Chatbot
 
-This project is a **music recommendation chatbot** that provides personalized song suggestions based on user conversation and emotional context. It uses GPT-3.5 for lightweight emotion analysis, fetches your Spotify playlist, and applies a pretrained autoencoder + cosine‐similarity filtering over audio features to generate tailored recommendations.
+This project is a **music recommendation chatbot** that provides personalized song suggestions based on user conversation and emotional context. It uses DistilRoBERTa-base for emotion analysis, fetches your Spotify playlist, and applies a pretrained autoencoder + cosine‐similarity filtering over audio features to generate tailored recommendations.
 
 ---
 
