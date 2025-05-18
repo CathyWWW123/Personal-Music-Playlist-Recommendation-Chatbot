@@ -62,9 +62,16 @@ You can deploy this Flask app on any hosting service (e.g., Render, Heroku, AWS)
     OPENAI_API_KEY=your_openai_key
     ```
 
-2.  Run the Flask app:
+2. To download the dataset required for training and music recommendation, run:
+
+```bash
+pip install gdown
+python download_data.py
+```
+
+3.  Run the Flask app:
     ```bash
     python app.py
     ```
 
-3.  Open your browser and go to the local URL (e.g., `http://127.0.0.1:5000`) shown in your terminal.
+4.  Open your browser and go to the local URL (e.g., `http://127.0.0.1:5000`) shown in your terminal.
