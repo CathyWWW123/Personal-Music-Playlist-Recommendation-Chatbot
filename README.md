@@ -50,14 +50,14 @@ You can deploy this Flask app on any hosting service (e.g., Render, Heroku, AWS)
     ```bash
     export SPOTIFY_CLIENT_ID=your_client_id
     export SPOTIFY_CLIENT_SECRET=your_client_secret
-    export HF_TOKEN=your_hugging_face_key
+    export HF_API_KEY=your_hugging_face_key
     export OPENAI_API_KEY=your_openai_key
     ```
     If you choose to use a `.env` file, its content would look like this:
     ```env
     SPOTIFY_CLIENT_ID=your_client_id
     SPOTIFY_CLIENT_SECRET=your_client_secret
-    HF_TOKEN=your_hugging_face_key
+    HF_API_KEY=your_hugging_face_key
     OPENAI_API_KEY=your_openai_key
     ```
 
