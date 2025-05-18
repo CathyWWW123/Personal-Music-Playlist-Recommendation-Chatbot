@@ -38,7 +38,7 @@ This project is a **music recommendation chatbot** that provides personalized so
    - Matches your playlist tracks to a master dataset.  
    - Encodes both seed tracks and candidate tracks (filtered by detected emotion) via an autoencoder.  
    - Computes cosine similarity between the average seed embedding and all candidate embeddings.  
-   - Returns the top 10 recommendations (excluding seeds), each with a direct Spotify URL.
+   - Returns the top 10 recommendations, each with a direct Spotify URL.
 
 ---
 
